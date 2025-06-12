@@ -1,0 +1,1 @@
+//Telas relacionadas a candidaturas e liberação de vagas.

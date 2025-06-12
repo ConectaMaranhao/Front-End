@@ -1,0 +1,41 @@
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Logs de dependências
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Pasta de dependências
+
+node_modules/
+
+# Saída de Build
+
+dist/
+dist-ssr/
+.output/
+
+# Arquivos de Ambiente
+# Essencial para segurança! Nunca envie chaves de API ou segredos para o repositório.
+.env
+.env.local
+.env.*.local
+
+# Arquivos de Cache
+
+.vite-cache/
+.npm/
+.yarn-cache/
+
+# Configurações de Editor/IDE
+
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
