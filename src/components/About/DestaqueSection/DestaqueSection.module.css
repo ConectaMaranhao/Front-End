@@ -1,0 +1,16 @@
+.destaqueContainer {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.destaqueContainer h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.cardsSection {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espaço entre os cards */
+  flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+}
