@@ -1,5 +1,7 @@
 //Tela específica para empresas.
 import React, { useEffect, useState } from "react";
+import styles from '../../components/Empresas/EmpresasPage.module.css';
+
 
 type Candidato = {
   id: number;
@@ -30,24 +32,34 @@ const EmpresaVagasPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Candidatos para suas vagas</h1>
-      {candidatos.length === 0 ? (
-        <p>Carregando candidatos...</p>
-      ) : (
-        <ul className="space-y-4">
-          {candidatos.map(candidato => (
-            <li key={candidato.id} className="border p-4 rounded-lg shadow-sm">
-              <h2 className="text-xl font-semibold">{candidato.nome}</h2>
-              <p>Email: {candidato.email}</p>
-              <p>Curso: {candidato.curso}</p>
-              <p>Status: <span className="font-medium">{candidato.status}</span></p>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+  <div className={styles.container}>
+    <h1 className={styles.titulo}>Candidatos para suas vagas</h1>
+
+    {candidatos.length === 0 ? (
+      <p>Carregando candidatos...</p>
+    ) : (
+      candidatos.map((candidato) => (
+        <div key={candidato.id} className={styles.card}>
+          <p><strong>Nome:</strong> {candidato.nome}</p>
+          <p><strong>Email:</strong> {candidato.email}</p>
+          <p><strong>Curso:</strong> {candidato.curso}</p>
+          <span
+            className={`${styles.status} ${
+              candidato.status === "Disponível"
+                ? styles.disponivel
+                : candidato.status === "Selecionado"
+                ? styles.selecionado
+                : styles.analise
+            }`}
+          >
+            {candidato.status}
+          </span>
+        </div>
+      ))
+    )}
+  </div>
+);
+
 };
 
 export default EmpresaVagasPage;
