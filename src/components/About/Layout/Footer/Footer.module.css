@@ -1,0 +1,84 @@
+.footerContainer {
+  background-color: #001f3f; /* Azul marinho escuro */
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Para responsividade */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #003366; /* Linha sutil de separação */
+}
+
+.marcaColumn {
+  flex: 2;
+  min-width: 250px;
+}
+.marcaColumn .logo {
+  width: 150px; 
+  margin-bottom: 0.2rem;
+}
+
+.marcaColumn h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.linksColumn {
+  flex: 1;
+  min-width: 150px;
+}
+
+.linksColumn h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #cccccc;
+}
+
+.linksColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linksColumn ul li {
+  margin-bottom: 0.75rem;
+}
+
+.linksColumn a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linksColumn a:hover {
+  color: #f0a500; 
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcons a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+  transform: scale(1.1);
+  color: #f0a500;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
