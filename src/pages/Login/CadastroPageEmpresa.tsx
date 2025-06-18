@@ -1,8 +1,9 @@
 //Tela de cadastro de empresa
+import React from 'react';
 import { CadastroEmpresa } from '../../components/CadastroEmpresa/CadastroEmpresa';
 
-const CadastroEmpresaPage = () => {
+const CadastroPageEmpresa: React.FC = () => {
   return <CadastroEmpresa />;
 };
 
-export default CadastroEmpresaPage;
+export default CadastroPageEmpresa;
