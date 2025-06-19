@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import styles from './Footer.module.css';
-import logo from '../../../../assets/About/logo-inova.png'; 
+import logo from '../../../assets/About/logo-inova.png'; 
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles.linksColumn}>
-          <h4>Contato</h4>
+          <h4>Contato</h4> 
           <ul>
             <li>contato@conecta-ma.com.br</li>
             <li>(98) 99999-9999</li>
