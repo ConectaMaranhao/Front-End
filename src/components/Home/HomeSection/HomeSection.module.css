@@ -1,0 +1,43 @@
+.homeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.textContainer {
+  flex: 1;
+  max-width: 50%;
+}
+.textContainer h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+.textContainer p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #555;
+}
+.imageContainer {
+  flex: 1;
+  text-align: right;
+}
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .textContainer {
+    max-width: 100%;
+  }
+  .imageContainer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
