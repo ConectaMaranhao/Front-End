@@ -1,0 +1,41 @@
+.rankingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-color: #001f3f; /* Cor de fundo escura */
+  color: white;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+.gamificacaoCard {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 300px;
+}
+.trofeuContainer img {
+  max-width: 250px;
+}
+.rankingLista h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.rankingLista ul {
+  list-style: none;
+  padding: 0;
+}
+.rankingLista li {
+  background-color: #f0f0f0;
+  color: black;
+  padding: 0.8rem 1.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.rankingLista li span {
+  margin-right: 1rem;
+  color: #555;
+}
