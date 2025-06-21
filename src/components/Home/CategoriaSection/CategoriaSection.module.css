@@ -1,0 +1,27 @@
+.categoriasContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.categoriaCard {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.categoriaCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.categoriaCard img {
+  width: 150px; 
+  margin-bottom: 1rem;
+}
+.categoriaCard p {
+  font-weight: bold;
+  color: #333;
+}
