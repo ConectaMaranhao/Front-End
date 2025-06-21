@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './AboutSection.module.css'; // Importando nossos estilos
-import type { IAbout } from '../../../interfaces/IAbout';
+import React from "react";
+import styles from "./AboutSection.module.css"; // Importando nossos estilos
+import type { IAbout } from "../../../../interfaces/IAbout";
 
 export const AboutSection: React.FC<IAbout> = ({
   title,
@@ -15,14 +15,14 @@ export const AboutSection: React.FC<IAbout> = ({
         <p>{text}</p>
       </div>
       <div className={styles.imageColumn}>
-        <img 
-          src={mainImage} 
-          alt="Equipe do projeto Conecta Maranhão" 
+        <img
+          src={mainImage}
+          alt="Equipe do projeto Conecta Maranhão"
           className={styles.mainImage}
         />
-        <img 
-          src={logoImage} 
-          alt="Logo do parceiro Inova Maranhão" 
+        <img
+          src={logoImage}
+          alt="Logo do parceiro Inova Maranhão"
           className={styles.logoImage}
         />
       </div>
