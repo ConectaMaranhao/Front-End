@@ -1,6 +1,7 @@
 //Tela específica para empresas.
 import React, { useEffect, useState } from "react";
 import styles from '../../components/Empresas/EmpresasPage.module.css';
+import { NavBar } from "../../components/Layout/NavBar/NavBar";
 
 
 type Candidato = {
@@ -32,6 +33,8 @@ const EmpresaVagasPage: React.FC = () => {
   }, []);
 
   return (
+    <>
+    <NavBar/>
   <div className={styles.container}>
     <h1 className={styles.titulo}>Candidatos para suas vagas</h1>
 
@@ -58,6 +61,7 @@ const EmpresaVagasPage: React.FC = () => {
       ))
     )}
   </div>
+  </>
 );
 
 };
