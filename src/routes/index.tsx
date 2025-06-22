@@ -4,7 +4,7 @@ import { HomePage } from '../pages/Home/HomePage';
 import { AboutPage } from '../pages/About/AboutPage';
 import { CursosPage } from '../pages/Cursos/CursosPage';
 import EmpresasPage from '../pages/Empresas/EmpresasPage';
-import { CadastroPageUsuario } from '../pages/Login/CadastroPageUsuario';
+import { CadastroPageUsuario } from '../pages/Login/CadastroPagePessoa';
 import CadastroPageEmpresa from '../pages/Login/CadastroPageEmpresa';
 export const AppRoutes: React.FC = () => {
   return (

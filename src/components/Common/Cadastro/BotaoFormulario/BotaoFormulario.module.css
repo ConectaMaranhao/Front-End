@@ -1,0 +1,48 @@
+.grupoBotoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.botaoCancelar,
+.botaoEnviar {
+  display: flex;
+  width: 240px;
+  padding: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botaoCancelar {
+  background-color: #fff;
+  color: #000;
+  border-color: #e0e0e0;
+}
+
+.botaoCancelar:hover {
+  background-color: #f5f5f5;
+}
+
+.botaoEnviar {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.botaoEnviar:hover {
+  background-color: #333;
+}
+
+.botaoEnviar:disabled {
+  background-color: #555;
+  border-color: #555;
+  cursor: not-allowed;
+} 
