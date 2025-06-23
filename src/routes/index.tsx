@@ -6,6 +6,7 @@ import { CursosPage } from '../pages/Cursos/CursosPage';
 import EmpresasPage from '../pages/Empresas/EmpresasPage';
 import { CadastroPageUsuario } from '../pages/Login/CadastroPagePessoa';
 import CadastroPageEmpresa from '../pages/Login/CadastroPageEmpresa';
+import PerfilUsuario from '../pages/Usuario/PerfilUsuario';
 export const AppRoutes: React.FC = () => {
   return (
     <Routes>
@@ -15,6 +16,7 @@ export const AppRoutes: React.FC = () => {
       <Route path="/empresas" element={<EmpresasPage />} />
       <Route path='/cadastro-usuario' element={<CadastroPageUsuario/>} />
       <Route path='/cadastro-empresa' element={<CadastroPageEmpresa/>} />
+      <Route path='/perfil-usuario' element={<PerfilUsuario/>} />
     </Routes>
   );
 };
