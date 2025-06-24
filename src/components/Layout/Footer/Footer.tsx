@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import styles from './Footer.module.css';
-import logo from '../../../assets/About/logo-inova.png'; 
+import logo from '../../../assets/logo.svg'; 
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -18,10 +19,10 @@ export const Footer: React.FC = () => {
         <div className={styles.linksColumn}>
           <h4>Navegação</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">Sobre Nós</a></li>
-            <li><a href="/cursos">Cursos</a></li>
-            <li><a href="/empresas">Para Empresas</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">Sobre Nós</Link></li>
+            <li><Link to="/cursos">Cursos</Link></li>
+            <li><Link to="/empresas">Para Empresas</Link></li>
           </ul>
         </div>
 
