@@ -1,0 +1,230 @@
+.secaoCurriculo {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  gap: 3.75rem;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.curriculoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.containerCurriculo {
+  align-self: stretch;
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  margin: auto 0;
+  flex-direction: column;
+  align-items: stretch;
+  font-size: 13px;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.tituloCurriculo {
+  color: rgba(0, 0, 0, 1);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.descricaoCurriculo {
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 12px;
+}
+
+.botoesCurriculo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.botaoSecundarioGrande {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 240px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.botaoPrimarioGrande {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 12px;
+  color: rgba(255, 255, 255, 1);
+  width: 240px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.listaCurriculo {
+  width: 100%;
+  max-width: 520px;
+  margin: 32px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px 0px;
+  z-index: 0;
+  gap: 40px;
+  flex: 1 0 0;
+}
+
+.linhaCurriculo {
+  display: flex;
+  width: 100%;
+  min-height: 132px;
+  align-items: center;
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.linhaCurriculo:not(:first-child) {
+  margin-top: 20px;
+}
+
+.artigoCurriculo {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  align-self: stretch;
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.containerImagemCurriculo {
+  display: flex;
+  min-height: 64px;
+  align-items: flex-start;
+  overflow: hidden;
+  justify-content: flex-start;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.imagemCurriculo {
+  background-color: rgba(217, 217, 217, 0.5);
+  display: flex;
+  min-height: 64px;
+  width: 100px;
+  height: 100px;
+  flex: 1;
+}
+
+.conteudoCurriculo {
+  min-width: 120px;
+  color: rgba(0, 0, 0, 1);
+  flex: 1;
+}
+
+.tituloItemCurriculo {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.subtituloItemCurriculo {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 4px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+@media (max-width: 900px) {
+  .curriculoGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .listaCurriculo {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .secaoCurriculo {
+    padding: 16px 12px;
+  }
+  
+  .listaCurriculo {
+    max-width: 100%;
+    padding: 0;
+    margin: 24px 0 0 0;
+    align-items: center;
+  }
+  
+  .botoesCurriculo {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .botaoSecundarioGrande,
+  .botaoPrimarioGrande {
+    width: 100%;
+    max-width: 240px;
+  }
+  
+  .containerCurriculo {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .tituloCurriculo {
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  .descricaoCurriculo {
+    text-align: center;
+  }
+  
+  .linhaCurriculo {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .artigoCurriculo {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .conteudoCurriculo {
+    text-align: center;
+  }
+} 
