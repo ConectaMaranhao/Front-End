@@ -1,0 +1,32 @@
+/* CtaBanner.module.css */
+.bannerCursos {
+  background-color: #BFCFEA;
+  padding: 3rem 2rem;
+  text-align: center;
+  align-content: center;
+  justify-items: center;
+}
+.logoCurso{
+  display: flex;
+  align-items: center;
+  background-color: #d0dcf0; 
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.logoText{
+   font-family: 'Arial Black', sans-serif;
+  font-weight: bold;
+  color: #222;
+  margin-right: 12px;
+  line-height: 1;
+}
+.logoText span {
+  display: block;
+}
+.bannerCursos img {
+  height: 40px;
+}
+.bannerCursos h3 {
+  font-size: 1.5rem;
+  color: #000000;
+}
