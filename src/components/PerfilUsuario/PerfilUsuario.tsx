@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./PerfilUsuario.module.css";
 import PerfilHeaderSecao from "./PerfilHeader/PerfilHeaderSecao";
 import ProgressoSecao from "./Progresso/ProgressoSecao";
 import CurriculoSecao from "./Curriculo/CurriculoSecao";
 import FormularioSecao from "./Formulario/FormularioSecao";
 import MedalhasSecao from "./Medalhas/MedalhasSecao";
+import { buscarPessoaPorId } from '../../services/api';
 
 export const PerfilUsuario: React.FC = () => {
+  const [pessoa, setPessoa] = useState<any>(null);
+  const pessoaId = localStorage.getItem('pessoaId');
+
+  useEffect(() => {
+    if (!pessoaId) return;
+    async function fetchPessoa() {
+      const res = await buscarPessoaPorId(pessoaId as string);
+      setPessoa(res.data);
+    }
+    fetchPessoa();
+  }, [pessoaId]);
+
+  if (!pessoa) return <div>Aguardando dados do login ou cadastro...</div>;
+
   return (
     <div className={styles.container}>
       {/* Barra Superior */}
@@ -27,15 +42,15 @@ export const PerfilUsuario: React.FC = () => {
         </div>
       </div>
 
-      <PerfilHeaderSecao />
+      <PerfilHeaderSecao pessoa={pessoa} />
 
-      <ProgressoSecao />
+      <ProgressoSecao xp={pessoa.xp} />
 
       <CurriculoSecao />
 
       <MedalhasSecao />
 
-      <FormularioSecao />
+      <FormularioSecao pessoa={pessoa} setPessoa={setPessoa} />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { validarCPF } from '../utils/validators';
 import * as api from '../services/api';
+import { useNavigate } from 'react-router-dom';
 
 export const useCadastroPessoa = () => {
   const [nome, setNome] = useState('');
@@ -13,6 +14,7 @@ export const useCadastroPessoa = () => {
   const [senha, setSenha] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const clearForm = () => {
     setNome('');
@@ -68,6 +70,13 @@ export const useCadastroPessoa = () => {
       };
 
       await api.criarPessoa(pessoaData);
+
+      const pessoasRes = await api.api.get('/pessoas');
+      const pessoa = pessoasRes.data.find((p: any) => p.cpf === cpf);
+      if (pessoa) {
+        localStorage.setItem('pessoaId', pessoa._id);
+        navigate('/perfil-usuario');
+      }
 
       alert('Pessoa cadastrada com sucesso!');
       clearForm();
