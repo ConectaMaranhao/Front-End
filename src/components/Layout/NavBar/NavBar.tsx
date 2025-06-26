@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
-
+import logo from "../../../assets/logo.svg";
 export const NavBar: React.FC = () => {
   const location = useLocation();
 
@@ -14,8 +14,16 @@ export const NavBar: React.FC = () => {
   return (
     <nav className={styles.navbarContainer}>
       <Link to="/" className={styles.logo} onClick={closeMobileMenu}>
-        Conecta Maranhão
+        <div className={styles.logoCurso}>
+        <div className={styles.logoText}>
+          <span>Conecta </span>
+          <span>Maranhão</span>
+        </div>
+        <img src={logo} alt="Conecta Maranhão" />
+      </div>
       </Link>
+
+      
 
       <div
         className={styles.menuIcon}
@@ -48,17 +56,17 @@ export const NavBar: React.FC = () => {
             </Link>
           </li>
         )}
-        {location.pathname !== "/empresas" && (
+        {/* {location.pathname !== "/empresas" && (
           <li>
             <Link to="/empresas" onClick={closeMobileMenu}>
               Para Empresas
             </Link>
           </li>
-        )}
-        {location.pathname !== "/contato" && (
+        )}*/}
+        {location.pathname !== "/login" && (
           <li>
-            <Link to="/contato" className={styles.ctaButton}>
-              Contato
+            <Link to="/login" className={styles.ctaButton}>
+              Login
             </Link>
           </li>
         )}
