@@ -1,0 +1,24 @@
+.rankingContainer {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 4rem auto;
+}
+
+.rankingContainer h2 {
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.descricao{
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;   
+}
+
+.cardsRank {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap; 
+}
