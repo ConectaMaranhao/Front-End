@@ -13,7 +13,7 @@ export const CursosSection: React.FC = () => {
           <button key={filtros} className={styles.filtroButton}>{filtros}</button>
         ))}
       </div>
-      <button className={styles.ctaButton}>Ver Cursos</button>
+     {/* <button className={styles.ctaButton}>Ver Cursos</button>*/}
     </section>
   );
 };

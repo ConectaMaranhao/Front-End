@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./CtaBannerCursos.module.css";
-import logo from "../../../assets/logo.svg"; // Logo simplificado
+import logo from "../../../assets/logo.svg";
 
 export const CtaBanner: React.FC = () => {
   return (

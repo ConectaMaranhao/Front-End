@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './LoginUsuario.module.css';
+import { NavBar } from '../Layout/NavBar/NavBar';
 
 export const LoginPageUsuario: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -10,6 +11,8 @@ export const LoginPageUsuario: React.FC = () => {
   };
 
   return (
+    <>
+    <NavBar/>
     <div className={styles.container}>
       <div className={styles.esquerda}>
         <h1>Acesso Login</h1>
@@ -49,5 +52,6 @@ export const LoginPageUsuario: React.FC = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };

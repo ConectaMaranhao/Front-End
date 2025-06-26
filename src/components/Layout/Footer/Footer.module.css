@@ -1,18 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .footerContainer {
-  background-color: #001f3f; /* Azul marinho escuro */
+  background-color: #001f3f; 
   color: #ffffff;
   padding: 4rem 2rem 2rem;
+  
 }
 
 .footerContent {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Para responsividade */
-  gap: 2rem;
+  flex-wrap: wrap; 
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #003366; /* Linha sutil de separação */
+  border-bottom: 1px solid #003366; 
 }
 
 .marcaColumn {

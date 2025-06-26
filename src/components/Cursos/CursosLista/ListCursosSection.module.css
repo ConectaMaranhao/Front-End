@@ -1,8 +1,8 @@
 .listCursosContainer {
   padding: 4rem 2rem;
   text-align: center;
-  max-width: 1200px;
   margin: 0 auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .listCursosContainer h2 {
   font-size: 2.2rem;
@@ -14,7 +14,7 @@
   gap: 2rem;
   margin-bottom: 3rem;
 }
-.ctaButton {
+/*.ctaButton {
   background-color: #343a40;
   color: white;
   border: none;
@@ -22,4 +22,4 @@
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-}
+}*/

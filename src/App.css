@@ -1,4 +1,8 @@
-.appContainer {
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+.AppContainer {
   display: flex;
   flex-direction: column;
   min-height: 100vh; 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import styles from "./PerfilUsuario.module.css";
 import PerfilHeaderSecao from "./PerfilHeader/PerfilHeaderSecao";

@@ -2,6 +2,7 @@
   background-color: #f8f9fa;
   text-align: center;
   padding: 4rem 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .cursosContainer h1 {
   font-size: 2.8rem;
@@ -24,9 +25,12 @@
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
+}
+.filtroButton:hover{
+  color: white;
   cursor: pointer;
 }
-.ctaButton {
+/*.ctaButton {
   background-color: #343a40;
   color: white;
   border: none;
@@ -34,4 +38,4 @@
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-}
+}*/
