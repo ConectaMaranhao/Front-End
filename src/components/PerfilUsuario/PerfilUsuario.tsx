@@ -11,15 +11,31 @@ import { buscarPessoaPorId } from '../../services/api';
 export const PerfilUsuario: React.FC = () => {
   const [pessoa, setPessoa] = useState<any>(null);
   const pessoaId = localStorage.getItem('pessoaId');
+  const userId = localStorage.getItem('userId');
 
   useEffect(() => {
-    if (!pessoaId) return;
     async function fetchPessoa() {
-      const res = await buscarPessoaPorId(pessoaId as string);
-      setPessoa(res.data);
+      if (pessoaId) {
+        const res = await buscarPessoaPorId(pessoaId as string);
+        setPessoa(res.data);
+      } else if (userId) {
+        // 1. Buscar contas e encontrar a do usuário logado
+        const contasRes = await import('../../services/api').then(m => m.api.get('/contas'));
+
+        const conta = contasRes.data.find((c: any) => c.userId && c.userId._id === userId);
+
+        if (conta) {
+          // 2. Buscar pessoas e encontrar a pessoa que tem a conta
+          const pessoasRes = await import('../../services/api').then(m => m.api.get('/pessoas'));
+
+          const pessoa = pessoasRes.data.find((p: any) => p.contaId === conta._id);
+          
+          if (pessoa) setPessoa(pessoa);
+        }
+      }
     }
     fetchPessoa();
-  }, [pessoaId]);
+  }, [pessoaId, userId]);
 
   if (!pessoa) return <div>Aguardando dados do login ou cadastro...</div>;
 
