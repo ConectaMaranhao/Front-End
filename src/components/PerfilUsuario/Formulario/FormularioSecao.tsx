@@ -12,6 +12,7 @@ const FormularioSecao: React.FC<FormularioSecaoProps> = ({ pessoa, setPessoa }) 
   const [nome, setNome] = useState(pessoa.nome || '');
   const [email, setEmail] = useState(pessoa.email || '');
   const [telefone, setTelefone] = useState(pessoa.telefone || '');
+  const [bio, setBio] = useState(pessoa.bio || '');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -24,7 +25,8 @@ const FormularioSecao: React.FC<FormularioSecaoProps> = ({ pessoa, setPessoa }) 
       await api.put(`/pessoas/${pessoa._id}`, {
         nome,
         email,
-        telefone
+        telefone,
+        bio
       });
      
       const pessoaAtualizada = await buscarPessoaPorId(pessoa._id);
@@ -58,6 +60,18 @@ const FormularioSecao: React.FC<FormularioSecaoProps> = ({ pessoa, setPessoa }) 
               />
           </div>
         </div>
+
+        <div className={styles.linhaFormulario}>
+          <div className={styles.grupoInput}>
+            <label className={styles.rotuloInput} htmlFor="nome">Bio</label>
+            <input className={styles.campoInput}
+              id="nome" placeholder="Edite sua bio"
+              value={bio}
+              onChange={e => setBio(e.target.value)}
+              />
+          </div>
+        </div>
+
         <div className={styles.linhaFormulario}>
           <div className={styles.grupoInput}>
             <label className={styles.rotuloInput} htmlFor="email">Email</label>
@@ -65,7 +79,7 @@ const FormularioSecao: React.FC<FormularioSecaoProps> = ({ pessoa, setPessoa }) 
               id="email" placeholder="Digite seu email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              required
+              
             />
           </div>
         </div>
@@ -80,7 +94,6 @@ const FormularioSecao: React.FC<FormularioSecaoProps> = ({ pessoa, setPessoa }) 
               onAccept={(value: any) => setTelefone(value)}
               placeholder="(11) 99999-9999"
               type="text"
-              required
             />
           </div>
         </div>

@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./PerfilUsuario.module.css";
 import PerfilHeaderSecao from "./PerfilHeader/PerfilHeaderSecao";
 import ProgressoSecao from "./Progresso/ProgressoSecao";
-import CurriculoSecao from "./Curriculo/CurriculoSecao";
 import FormularioSecao from "./Formulario/FormularioSecao";
 import MedalhasSecao from "./Medalhas/MedalhasSecao";
 import { buscarPessoaPorId } from '../../services/api';
@@ -12,6 +11,13 @@ export const PerfilUsuario: React.FC = () => {
   const [pessoa, setPessoa] = useState<any>(null);
   const pessoaId = localStorage.getItem('pessoaId');
   const userId = localStorage.getItem('userId');
+
+  // ref pra seção formulário
+  const formularioRef = useRef<HTMLDivElement>(null);
+
+  const rolarParaFormulario = () => {
+    formularioRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useEffect(() => {
     async function fetchPessoa() {
@@ -41,7 +47,8 @@ export const PerfilUsuario: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      {/* Barra Superior */}
+      {/*
+      Barra Superior
       <div className={styles.barraSuperior}>
         <div className={styles.iconeAvatar} />
         <div className={styles.titulo}>Meu Perfil</div>
@@ -55,19 +62,19 @@ export const PerfilUsuario: React.FC = () => {
               alt="Search"
               className={styles.iconeBusca}
             />
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div> */}
 
-      <PerfilHeaderSecao pessoa={pessoa} />
+      <PerfilHeaderSecao pessoa={pessoa} aoClicarEditarPerfil={rolarParaFormulario} />
 
       <ProgressoSecao xp={pessoa.xp} />
 
-      <CurriculoSecao />
-
       <MedalhasSecao />
 
-      <FormularioSecao pessoa={pessoa} setPessoa={setPessoa} />
+      <div ref={formularioRef}>
+        <FormularioSecao pessoa={pessoa} setPessoa={setPessoa} />
+      </div>
     </div>
   );
 };
