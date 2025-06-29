@@ -20,7 +20,6 @@ export const ListCursos: React.FC = () => {
           <CardCursos key={index} categoria={cursos.categoria} title={cursos.title} img={cursos.img}/>
         ))}
       </div>
-    {/* <button className={styles.ctaButton}>Inscreva-se Agora</button>*/}
     </section>
   );
 };

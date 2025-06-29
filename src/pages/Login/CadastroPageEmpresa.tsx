@@ -1,4 +1,3 @@
-//Tela de cadastro de empresa
 import React from "react";
 import { NavBar } from "../../components/Layout/NavBar/NavBar";
 

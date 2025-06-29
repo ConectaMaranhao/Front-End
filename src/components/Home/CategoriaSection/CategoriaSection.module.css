@@ -9,7 +9,6 @@
 }
 .categoriaCard {
   text-align: center;
-  cursor: pointer;
   transition: transform 0.2s ease;
 }
 .categoriaCard:hover {

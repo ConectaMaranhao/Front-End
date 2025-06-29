@@ -2,7 +2,7 @@ import React from 'react';
 import { CardRankAlunos } from '../CardRankAlunos/CardRankAlunos';
 import styles from "./SectionRankingAluno.module.css"
 
-// Importe as imagens dos troféus/medalhas que você salvou em /assets
+
 import medalOuro from '../../../assets/Medalhas/trofeu-ouro.png';
 import medalPrata from '../../../assets/Medalhas/medalha-de-prata.png';
 import medalBronze from '../../../assets/Medalhas/medalha-de-bronze.png';

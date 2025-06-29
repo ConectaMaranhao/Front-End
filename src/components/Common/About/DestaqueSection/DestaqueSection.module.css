@@ -11,6 +11,6 @@
 .cardsSection {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Espaço entre os cards */
-  flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+  gap: 2rem;
+  flex-wrap: wrap;
 }
