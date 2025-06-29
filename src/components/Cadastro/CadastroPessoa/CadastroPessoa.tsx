@@ -55,6 +55,7 @@ export const CadastroUsuario: React.FC = () => {
             <input 
               type="date" 
               value={dataNascimento} 
+              title='Data de nascimento'
               onChange={e => setDataNascimento(e.target.value)} 
               required 
             />
