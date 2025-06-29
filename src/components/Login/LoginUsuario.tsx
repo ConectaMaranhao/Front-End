@@ -71,11 +71,12 @@ export const LoginPageUsuario: React.FC = () => {
               onChange={(e) => setSenha(e.target.value)}
               required
             />
-          </div>
-          <div style={{ marginBottom: '10px', textAlign: 'right' }}>
-            <a href="/Front-End/cadastro-usuario" style={{ color: '#000', textDecoration: 'none', cursor: 'pointer', fontSize: '0.95em' }}>
+            <a href="/Front-End/cadastro-usuario">
               Não tem uma conta? clique aqui para criar uma
             </a>
+          </div>
+          <div style={{ marginBottom: '10px', textAlign: 'right' }}>
+            
           </div>
           {error && <div className={styles.erro}>{error}</div>}
           <div className={styles.grupoBotoes}>
