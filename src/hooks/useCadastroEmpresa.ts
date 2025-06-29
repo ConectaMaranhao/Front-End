@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 import { validarCNPJ } from '../utils/validators';
 import * as api from '../services/api';
 
@@ -101,3 +101,4 @@ export const useCadastroEmpresa = () => {
     aoSubmeterForm,
   };
 }; 
+*/

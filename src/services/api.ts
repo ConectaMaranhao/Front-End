@@ -23,5 +23,5 @@ export const login = (data: any) => api.post('/login', data);
 // Recursos protegidos
 export const criarConta = (data: any) => api.post('/contas', data);
 export const criarPessoa = (data: any) => api.post('/pessoas', data);
-export const criarEmpresa = (data: any) => api.post('/empresas', data);
+/*export const criarEmpresa = (data: any) => api.post('/empresas', data);*/
 export const buscarPessoaPorId = (id: string) => api.get(`/pessoas/${id}`); 

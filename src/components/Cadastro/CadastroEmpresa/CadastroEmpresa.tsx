@@ -1,8 +1,8 @@
-import React from 'react';
+/*import React from 'react';
 import styles from './CadastroEmpresa.module.css';
 import { IMaskInput } from 'react-imask';
 import { FormButtons } from '../../Common/Cadastro/BotaoFormulario/BotaoFormulario';
-import { useCadastroEmpresa } from '../../../hooks/useCadastroEmpresa';
+//import { useCadastroEmpresa } from '../../../hooks/useCadastroEmpresa';
 
 export const CadastroEmpresa: React.FC = () => {
   const {
@@ -101,4 +101,4 @@ export const CadastroEmpresa: React.FC = () => {
       </form>
     </div>
   );
-};
+};*/
