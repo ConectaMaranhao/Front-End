@@ -65,7 +65,7 @@
 font-size: 1.2rem;
 font-weight: bold;
 }
-.grupoInput a{
+.linkCadastro{
     color: #000; 
     text-decoration: none;
     cursor: pointer;
@@ -73,7 +73,7 @@ font-weight: bold;
     position: relative;
     top: 10px;
 }
-.grupoInput a:hover{
+.linkCadastro:hover{
     color: #001f3f;
 }
 .grupoBotoes {

@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import styles from './LoginUsuario.module.css';
 import { NavBar } from '../Layout/NavBar/NavBar';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as api from '../../services/api';
 
 export const LoginPageUsuario: React.FC = () => {
@@ -71,9 +73,9 @@ export const LoginPageUsuario: React.FC = () => {
               onChange={(e) => setSenha(e.target.value)}
               required
             />
-            <a href="/Front-End/cadastro-usuario">
+            <Link to="/cadastro-usuario" className={styles.linkCadastro}>
               Não tem uma conta? clique aqui para criar uma
-            </a>
+            </Link>
           </div>
           <div style={{ marginBottom: '10px', textAlign: 'right' }}>
             

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import styles from './CadastroPessoa.module.css';
 import { IMaskInput } from 'react-imask';
