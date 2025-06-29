@@ -5,6 +5,7 @@ import timeImage from "../../assets/About/dev-time.svg";
 import inovaLogo from "../../assets/About/logo-inova.png";
 import { SectionDestaque } from "../../components/Common/About/DestaqueSection/DestaqueSection";
 import { NavBar } from "../../components/Layout/NavBar/NavBar";
+import { PowerBiSection } from "../../components/Common/About/PowerBiSection/PowerBiSection";
 
 export const AboutPage: React.FC = () => {
   const aboutText = `Uma análise cuidadosa dos dados sobre educação e do índice de desemprego no estado revelou que existe uma forte relação entre esses dois indicadores. Observando essa situação e visando aumentar a renda da população do Maranhão, surgiu a ideia de desenvolver um espaço online que aproxime as pessoas das vagas de trabalho, unindo o aprendizado a uma experiência simples, fácil de usar e que realmente prenda a atenção.`;
@@ -23,6 +24,7 @@ export const AboutPage: React.FC = () => {
         logoImage={inovaLogo}
       />
       <SectionDestaque />
+      <PowerBiSection />
     </div>
   );
 };
