@@ -5,6 +5,7 @@ import type { IAbout } from "../../../../interfaces/IAbout";
 export const AboutSection: React.FC<IAbout> = ({
   title,
   text,
+  text2,
   mainImage,
   logoImage,
 }) => {
@@ -13,6 +14,7 @@ export const AboutSection: React.FC<IAbout> = ({
       <div className={styles.textColumn}>
         <h1>{title}</h1>
         <p>{text}</p>
+        <p>{text2}</p>
       </div>
       <div className={styles.imageColumn}>
         <img
