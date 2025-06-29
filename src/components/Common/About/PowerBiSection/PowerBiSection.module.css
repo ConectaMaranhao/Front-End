@@ -1,0 +1,59 @@
+.iframeSection {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  transition: padding 0.3s ease;
+}
+
+.iframeSection h2 {
+  font-size: 2.2rem;
+}
+
+.iframeSection p {
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.iframeContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reportIframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: none;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .reportIframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .iframeSection {
+    padding: 2rem 1rem;
+  }
+
+  .reportIframe {
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iframeSection {
+    padding: 1rem;
+  }
+
+  .reportIframe {
+    height: 240px;
+  }
+}
